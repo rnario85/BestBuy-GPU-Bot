@@ -79,8 +79,11 @@ const CREDITCARD_CVV = "***";
 ```
 * Test Mode "YES" will not purchase item. But do all the steps except pressing the last button. ```TESTMODE = "No" ``` will purchase the item.
 ```
-const TESTMODE = "Yes"
+const TESTMODE = "Yes";
 ``` 
+* Last 4 digits of your registered phone # for SMS verification (Not Required. Manual input will be needed on verification screen if left blank)
+```
+const SMS_DIGITS = "****";
 
 ## Workflow
 
@@ -141,6 +144,13 @@ Please use ```TESTMODE = "Yes"``` to test with an item already in stock.
 	* Button classes layered into 'if else' loops
 	* When 1st ATC is pressed. 'Adding..' takes about 4-6 seconds. We double check gray color for 'Please Wait'.
 	* If not Please Wait then 2nd ATC is triggered
+* 3.3 Button layers are reinforced
+	* Easy edit button classes and better console logs.
+* 3.4 GotoCart Button Class Layers and some bug fixes
+	* Added check for CVV element to avoid error when element is not present
+* 3.5 Handler for entering last 4 digits for SMS verification
+* 3.6 Added several Button Class Layers and updated to click new Verify Your Account button
+	* Updated NEW_QUEUE_TIME_DELAY flag to change how often new queue time is requested
 
 ## License
 
